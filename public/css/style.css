@@ -1,0 +1,76 @@
+:root{
+    --main-bg-color:#eff5fe;
+    --border-color:#0288d147
+}
+
+body, html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--main-bg-color);
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body, .drop-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upload-container{
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px #0000002e;
+}
+.drop-zone{
+    width: 500px;
+    height: 200px;
+    border:2px dashed var(--border-color);
+    margin:20px;
+    border-radius: 10px;
+     flex-direction: column;
+     background-color: white;
+}
+
+.icon-container{
+    position: relative;
+    width: 75px;
+    height: 100px;
+}
+
+.icon-container img {
+    position: absolute;
+    width: 75px;
+    transition: transform 250ms ease-in-out;
+    
+}
+.icon-container .centre {
+    z-index: 2;
+
+}
+
+.dragged .icon-container .right{
+    transform: rotate(10deg) translateX(20px) scale(0.9);
+    transform-origin: bottom;
+    filter: grayscale(0.5);
+}
+ .dragged .icon-container .left{
+    transform: rotate(-10deg) translateX(-20px) scale(0.9);
+    transform-origin: bottom;
+    filter: grayscale(0.5);
+}
+.dragged .icon-container .centre {
+    transform: translateY(-5px);
+}
+.dragged.drop-zone{
+    background-color: var(--main-bg-color);
+    border-color: blue;
+    transition: all .2s ease;
+}
+
+#fileInput{
+    display: none;
+}
+
+.browseBtn{
+    color: #2196f3;
+    cursor: pointer;
+}

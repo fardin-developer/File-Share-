@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 0;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75vh;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background-color: rgb(192, 192, 192);
+            height: 300px;
+            width: 500px;
+
+        }
+
+        .details {
+            margin-top: 4rem;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 200px;
+            background-color: aqua;
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: blue;">Download Now</h1>
+    <div class="main">
+        <div class="box">
+            <div class="details">
+                <p><%=uuid%></p>
+                <p><%=fileName%></p>
+                <p><%=fileSize%></p>
+            </div>
+
+            <a href="<%=download%>">
+                <button class="btn" style="cursor: pointer;" type="button">Download Link</button>
+            </a>
+
+        </div>
+
+
+
+    </div>
+    </div>
+
+</body>
+
+</html>

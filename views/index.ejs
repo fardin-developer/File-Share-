@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>File Share</title>
+</head>
+<body>
+    <section class="upload-container">
+      
+      <div class="drop-zone">
+        
+        <div class="icon-container">
+            <img src="/img/file.svg" alt="" srcset="" class="left" draggable="false">
+            <img src="/img/file.svg" alt="" srcset="" class="centre" draggable="false">
+            <img src="/img/file.svg" alt="" srcset="" class="right" draggable="false">
+        </div>
+        <form method="post" action="/api/files" enctype="multipart/form-data">
+          <input type="file" name="avatar">
+          <button type="submit" style="color: rgb(255, 255, 255); background-color: rgb(58, 226, 58); height: 30px;width: 100px;">Upload</button>
+        </form>
+        
+        
+        <!--<div class="title">Drop your Files here or,
+          <span class="browseBtn">Browse</span>
+        </div>-->
+      </div>
+    </section>
+    <script src="/js/index.js"></script>
+</body>
+</html>
